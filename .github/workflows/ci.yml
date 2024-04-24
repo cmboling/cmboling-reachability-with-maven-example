@@ -2,6 +2,7 @@ name: ci
 
 on:
     push:
+    workflow_dispatch:
     schedule:
       - cron: '0 9 * * *'  # Run every day at 9am UTC
 
