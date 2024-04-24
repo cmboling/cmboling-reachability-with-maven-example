@@ -33,3 +33,6 @@ jobs:
 
           - name: Run Analysis (in debug mode) (and output mode)
             run: fossa analyze -o --debug
+
+          - name: Run Analysis (in debug mode)
+            run: fossa analyze --debug
