@@ -35,4 +35,4 @@ jobs:
             run: fossa analyze -o --debug
 
           - name: Run Analysis (in debug mode)
-            run: fossa analyze --debug --fossa-api-key ${{ secrets.FOSSA_API_KEY }}
+            run: fossa analyze --fossa-api-key ${{ secrets.FOSSA_API_KEY }}
