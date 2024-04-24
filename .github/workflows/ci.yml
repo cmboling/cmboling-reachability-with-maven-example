@@ -34,5 +34,5 @@ jobs:
           - name: Run Analysis (in debug mode) (and output mode)
             run: fossa analyze -o --debug
 
-          - name: Run Analysis (in debug mode)
+          - name: Run Analysis
             run: fossa analyze --fossa-api-key ${{ secrets.FOSSA_API_KEY }}
