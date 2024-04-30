@@ -35,4 +35,8 @@ jobs:
             run: fossa analyze -o --debug
 
           - name: Run Analysis
-            run: fossa analyze --fossa-api-key ${{ secrets.FOSSA_API_KEY }} --static-only-analysis
+            run: |
+                fossa analyze --fossa-api-key ${{ secrets.FOSSA_API_KEY }} --static-only-analysis
+                fossa test --fossa-api-key ${{ secrets.FOSSA_API_KEY }}
+                fossa report attribution --format spdx-json --fossa-api-key ${{ secrets.FOSSA_API_KEY }}
+                ls -l
